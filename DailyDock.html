@@ -1,0 +1,49 @@
+<!-- this is the HTML file, which is the agent to show what the 
+ JavaScript did for my code -- output terminal for my code -->
+<!DOCTYPE html> <!-- basic set up that I learned about HTML-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DailyDock</title>  <!-- title of the webpage-->
+    <link rel="stylesheet" href="styles.css">  <!-- css file that makes the page looks better-->
+</head>
+<body>
+    <header>
+        <h1>Welcome to DailyDock</h1>  <!-- Welcome note for the user -->
+    </header>
+    <hr>
+    <header id="time-forecast-wrapper"> <!-- elements for the page -->
+        <div id="time"></div>
+        <div id="forecast"></div>
+    </header>
+    <hr>
+    <header id="calendar-header"> <!-- elements for the page -->
+        <button class="calendar-prenex-icon" id="calendar-previous">Previous</button>
+        <h2 id="calendar-current-date"></h2>
+        <button class="calendar-prenex-icon" id="calendar-next">Next</button>
+    </header>
+    <div id="calendar"></div>
+    <div id="event-popup" class="popup hidden">
+        <div class="popup-content">
+            <span id="popup-close">&times;</span>
+            <h3>To-Do List for <span id="selected-date"></span></h3>
+            <div id="todo-list"></div>
+            <input type="text" id="event-input" placeholder="Add a new task."/>
+            <button id="save-event">Save</button>
+        </div>
+    </div>
+    <hr>
+    <section id="card-game-section"> <!-- elements for the page -->
+        <h2>Take a Break: Card Memory Game</h2>
+        <div class="memory-game"></div>
+        <div id="game-status" class="hidden">
+            <h3>You won!</h3>
+            <button id="reset-game">Play Again</button>
+        </div>
+    </section>
+    <script type="module" src="main.js"></script>  <!-- important section! -->
+    <script type="module" src="cardgame.js"></script> <!-- importing the JavaScript file! -->
+</body>
+</html>

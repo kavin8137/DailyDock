@@ -1,0 +1,299 @@
+/* this is the code for decorating the body section */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f7f9fc;
+    color: #333;
+}
+
+/* this is the code for the header */
+header h1 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* this is the code for the time blog */
+#time {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* for inner display for the time block */
+#time article {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    background-color: e9f5ff;
+    box-sizing:border-box;
+}
+
+/* the code for calendar header */
+#calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+/* the next and previous button for the calendar header */
+#calendar-header button {
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* code when cursor hovering the bottons on calendar header */
+#calendar-header button:hover {
+    background-color: #0056b3;
+}
+
+/* code for calendar header */
+#calendar-header h2 {
+    margin: 0 10px;
+    font-weight: normal;
+}
+
+/* code for calendar grid */
+#calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* code for individual day */
+.calendar-day {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+/* code when the cursor hoering the day */
+.calendar-day:hover {
+    background-color: #e0f7fa;
+}
+
+/* when the calendar is empty */
+.calendar-day-empty {
+    background-color: transparent;
+    color: #bbb;
+    box-shadow: none;
+}
+
+/* if there is some tasks on the day */
+.active {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+}
+
+/* popup GUI for the to do list */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* code for the popup when it is not activate */
+.popup.hidden {
+    display: none;
+}
+
+/* code for the popup content */
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10 px;
+    width: 300px;
+    text-align: center;
+    position: relative;
+}
+
+/* code for the popup is closed */
+#popup-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* additional code for the calendar */
+.calendar-day {
+    position: relative;
+    cursor: pointer;
+}
+
+/* code for calendar events */
+.calendar-event {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #007bff;
+    font-style: italic;
+}
+
+/* code for calendar dot indication */
+.calendar-dot {
+    width: 6px;
+    height: 6px;
+    background-color: #28a745;
+    border-radius: 50%;
+    margin: 4px auto 0;
+}
+
+/* code for the forecast */
+#time-forecast-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 800px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* code shared with the time and forecast blog */
+#time, #forecast {
+    flex: 1;
+    padding: 10px;
+    background-color: #e9f5ff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+/* code for forecast header */
+#forecast h2 {
+    font-size: 1.2em;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+/* code for forecast list */
+#forecast ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.95em;
+}
+
+/* code for forecast images */
+#forecast img {
+    max-width: 60px;
+    width: 40px;
+    height: 40px;
+    vertical-align:middle;
+}
+
+/* code for the card game section */
+#card-game-setion {
+    max-width: 500px;
+    margin: 30px auto;
+    text-align: center;
+    background: #f0f8ff;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* code for the card game */
+.memory-game {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    justify-items: center;
+    margin-top: 10px;
+    max-width: 440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* code for the cards */
+.memory-card {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+}
+
+/* code with the card is flip -- animation!! */
+.memory-card.flip {
+    transform: rotateY(180deg);
+}
+
+/* code for the cards for front and back */
+/* space is required to target the correct object to decorate for */
+.memory-card .front, .memory-card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    border: 1px solid #999;
+}
+
+/* unique code for the front card */
+.memory-card .front {
+    background-color: #007bff;
+    color: white;
+}
+
+/* unique code for the back card */
+.memory-card .back {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+}
+
+/* code for the game if it is over */
+#game-status {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* code for the game if it is starting */
+#game-status.hidden {
+    display: none;
+}
+
+/* code for restarting the game */
+#reset-game {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* code for the restart button */
+#reset-game:hover {
+    background-color: #0056b3;
+}
