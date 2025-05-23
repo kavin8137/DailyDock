@@ -9,7 +9,7 @@ Lastly, I have included a Card Game in case I need a break from my day. I did fo
 The code basically work without any installation, which I could be wrong. At least I did not do any additional installation to my local computer when I was working on this project. **However, if you choose to clone this repository and view it on your local computer, you have to view the html file using Visual Studio Code under the option (mouse right click) of "Open with Live Server".**
 
 Nevertheless, here's the link to the resulting website for demonstration.
-[Software Demo Website](https://somup.com/cTh03pMGh4)
+[Software Demo Website](https://kavin8137.github.io/DailyDock/)
 
 I have also include a short demonstration video on explaning how the program works.
 
